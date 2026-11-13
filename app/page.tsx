@@ -28,9 +28,10 @@ export default function Home() {
       setSession(data.session)
       if (data.session) loadTasks()
     })
-    const { data } = supabase.auth.onAuthStateChange((_event, s) => {
+        const { data } = supabase.auth.onAuthStateChange((_event, s) => {
       setSession(s)
       if (s) loadTasks()
+      else setTasks([])
     })
     return () => data.subscription.unsubscribe()
     // eslint-disable-next-line react-hooks/exhaustive-deps

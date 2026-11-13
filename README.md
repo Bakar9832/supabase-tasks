@@ -1,5 +1,7 @@
 # Supabase Tasks
 
+Live demo: https://supabase-tasks-nu.vercel.app
+
 A small task app built to practise Supabase: email and password login, a PostgreSQL table, and Row Level Security so each user only sees their own tasks.
 
 ## Stack
